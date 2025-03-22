@@ -1,0 +1,31 @@
+{% extends "user.html" %}
+
+{% block content %}
+
+<section class="container text-center md">
+  <h1>Welcome to CalmSpace</h1>
+</section>
+
+<section class="container text-center md my-5" style="max-width:600px">
+  <h3>Available therapists</h3>
+  <table class="table table-hover table-striped">    
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Therapist Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for therapist in therapists %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td style="text-transform: capitalize;">{{ therapist.fName }} {{ therapist.lName }}</td>
+        <td class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"><a href="mailto:{{ therapist.email }}">{{ therapist.email }}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% endblock %}

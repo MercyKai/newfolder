@@ -1,0 +1,72 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+<section class="container text-center md">
+    <h1>Our Team</h1>
+    <p class="lead">Meet Some of Our Experts</p>
+  </section>
+
+  <section class="container text-center md">
+    <div class="row g-0 position-relative m-4" id="emily">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="{{ url_for('static', filename='images/ga.jpg') }}" class="w-100 rounded-circle hover-zoom-out" alt="...">
+        </div>
+        <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+          <div class="card-body">
+          <h3 class="mt-0">Dr. Emily Carter, Psychologist</h3>
+          <p class="lead">Dr. Carter is a licensed psychologist with over 15 years of experience in helping people manage stress, anxiety and emotional well-being. She specializes in Cognitive Behavioral Therapy which is a proven method to change negative thought patterns and improve mental health.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4" id="michael">
+        <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+          <div class="card-body">
+          <h3 class="mt-0">Michael Johnson, Clinical Social Worker</h3>
+          <p class="lead">Michael is a licensed clinical social worker who helps people with relationship struggles, depression and personal growth. He specializes in couples and family therapy, helping individuals navigate emotional challenges and improve communication.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="{{ url_for('static', filename='images/hi.jpg') }}" class="w-100 rounded-circle hover-zoom-out" alt="...">
+        </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4" id="sarah">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="{{ url_for('static', filename='images/k.jpg') }}" class="w-100 rounded-circle hover-zoom-out" alt="...">
+        </div>
+        <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+          <div class="card-body">
+          <h3 class="mt-0">Dr. Sarah Lee, National Certified Counselor</h3>
+          <p class="lead">Dr. Lee specializes in trauma therapy, helping people recover from past trauma, PTSD and emotional pain. She uses mindfulness-based therapy to support emotional healing and resilience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 position-relative m-4">
+        <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+          <div class="card-body">
+          <h3 class="mt-0">Dr. Lisa Brown, Child Psychologist</h3>
+          <p class="lead">Dr. Brown specializes in child and adolescent psychology, helping children, teenagers and parents navigate emotional and behavioral challenges. She provides a supportive, engaging approach that is tailored to younger clients.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="{{ url_for('static', filename='images/e.jpg') }}" class="w-100 rounded-circle hover-zoom-out" alt="...">
+        </div>
+      </div>
+  
+  <div class="row g-0 position-relative m-4">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{{ url_for('static', filename='images/w.jpg') }}" class="w-100 rounded-circle hover-zoom-out" alt="...">
+    </div>
+    <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+      <div class="card-body">
+      <h3 class="mt-0">Dr. Robert Adams, Psychiatrist</h3>
+      <p class="lead">Dr. Adams is a board-certified psychiatrist who specializes in treating mood disorders, anxiety and OCD. He offers an approach to mental health care which combines therapy with medication management when needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

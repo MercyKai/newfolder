@@ -1,0 +1,32 @@
+{% extends "logins.html" %}
+
+{% block content %}
+
+<section class="container p-4" style="max-width: 600px; background-color: white; margin-top:30px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); border-radius: 8px;">
+<form method="post" action="{{ url_for('login') }}">
+  <section class="container text-center md">
+    <h1>Sign In</h1>
+    <p class="lead">Log in to Your Account</p>
+  </section>
+  <div class="row mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+  </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword5" class="form-label">Password</label>
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="password">
+    </div>
+  </div>
+  <div class="mb-3 text-center">
+    <button type="submit" class="btn btn-success" name="signIn">Sign In</button>
+  </div>
+  <div class="container text-center">
+    Don't Have an Account?
+    <a href="{{ url_for('register') }}">
+    <button class="btn btn-link" type="button">Sign Up</button>
+    </a>
+  </div>
+</form>
+</section>
+{% endblock %}

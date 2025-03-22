@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CalmSpace</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}">CalmSpace</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('therapists') }}">Our Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+          </li>       
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block content %}
+
+
+{% endblock %}
+
+<div class="card py-3 px-5" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='images/ready.jpg') }}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body mx-5 px-5">
+        <h3 class="card-title">Ready to Start Your Journey?</h5>
+        <p class="card-text lead">Take the first step towards healing
+           and self-growth with our expert therapists. Whether
+            you need help with stress, anxiety, relationships
+             or personal growth, we provide a safe space for
+              conversations and change.</p>
+              <a href="{{ url_for('login') }}" class="btn btn-primary stretched-link">GET STARTED</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-black text-center py-2" style="background-color: #ede6ff">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h3>About Us</h3>
+              <p class="lead">CalmSpace is a therapy platform 
+                that provides mental health services.</p>
+          </div>
+          <div class="col-md-6">
+              <h3>Contact Details</h3>
+              <ul class="list-unstyled lead">
+                  <li><a href="https://wa.me/" class="text-success">WhatsApp: (+254) 700 123 456</a></li>
+                  <li><a href="mailto:info@calmspace.com" class="text-primary">info@calmspace.com</a></li>
+                  <li>Virtual Hours: 8:00 AM to 7:00 PM</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<div class="text-center text-black" style="background: linear-gradient(to top, #6a5acd, #ede6ff); font-size: 15px;">&copy; 2025 CalmSpace. All rights reserved.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

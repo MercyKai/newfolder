@@ -1,0 +1,31 @@
+{% extends "user.html" %}
+
+{% block content %}
+<section class="container text-center md">
+    <h1>What's New</h1>
+    <p class="lead">New in Technology and AI</p>
+  </section>
+  
+<section class="container text-center md">
+  <div class="row g-0 position-relative m-4" id="emily">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="{{ url_for('static', filename='images/ed.jpg') }}" class="w-100" alt="...">
+      </div>
+      <div class="col-md-6 p-4 ps-md-0 d-flex align-items-center justify-content-center ">
+        <div class="card-body">
+        <h3 class="mt-0">Facial Emotion Recognition</h3>
+        <p class="lead">Discover how AI detects emotions in real-time!  
+            Our Facial Emotion Recognition system analyzes 
+            your expressions and predicts emotions.  
+            Try it out and see, explore different facial expressions, 
+            and see how AI interprets your mood!</p>
+        <div class="container text-center">
+            <a href="{{ url_for('main') }}">
+                <button class="btn btn-primary" type="button">START</button>
+            </a>
+          </div>        
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

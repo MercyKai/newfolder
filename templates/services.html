@@ -1,0 +1,75 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<section class="container text-center md">
+    <h1>Services</h1>
+    <p class="lead">Our Expertise</p>
+  </section>
+
+  <section class="container text-center my-5" style="max-width:1000px"> 
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card mb-5 card-hover">
+          <img src="{{ url_for('static', filename='images/3.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body" id="individual">
+            <h5 class="card-title h2">Individual Counseling</h5>
+            <p class="card-text">Talk to a therapist about stress, anxiety, depression, 
+              self-esteem or life challenges. Get personalized 
+              advice and coping strategies to help you feel better.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+        <div class="card mb-5 card-hover">
+          <img src="{{ url_for('static', filename='images/4.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body" id="couple">
+            <h5 class="card-title h2">Couples counseling</h5>
+            <p class="card-text">Whether you're facing communication barriers, trust issues 
+              or conflicts, our therapy sessions help couples understand 
+              each other better.</p>
+            </div>
+        </div>
+      </div>
+
+        <div class="col">
+        <div class="card mb-5 card-hover">
+          <img src="{{ url_for('static', filename='images/21.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title h2">Family counseling</h5>
+            <p class="card-text">Our family sessions help with parenting challenges, 
+              family conflicts and communication, creating a more 
+              understanding and supportive home.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+        <div class="card mb-5 card-hover">
+          <img src="{{ url_for('static', filename='images/8.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body" id="trauma">
+            <h5 class="card-title h2">Trauma counseling</h5>
+            <p class="card-text">We provide specialized support for individuals coping with 
+              trauma, grief, PTSD or emotional distress. Our 
+              therapists help you navigate your emotions in a safe and 
+              supportive way.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card mb-5 card-hover">
+            <img src="{{ url_for('static', filename='images/1.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title h2">Stress and emotional well-being</h5>
+              <p class="card-text">Our therapists help with stress, anger and emotions, 
+                giving practical skills to stay calm, communicate better
+                and handle challenges.</p>
+              </div>
+            </div>
+          </div>
+
+</section>
+
+{% endblock %}

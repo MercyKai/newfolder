@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="container py-1 text-center">
+    <section class="container text-center md">
+      <h1>Emotion Recognition</h1>
+      <p class="lead">Frame</p>
+    </section>
+
+    <div class="container text-center">
+      <a href="{{ url_for('user_dashboard') }}">
+        <button class="btn btn-danger btn-lg" type="button" style="width: 200px;">STOP</button>
+      </a>
+    </div>
+
+<div class="video-container mb-3" style="justify-content: center;display: flex;">
+        
+    <img src="{{ url_for('video')}}" class="my-5">
+        
+</div>  
+ 
+{% endblock %}
