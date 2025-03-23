@@ -8,6 +8,9 @@
     <h1>Sign In</h1>
     <p class="lead">Log in to Your Account</p>
   </section>
+  {% if msg %}
+  <p class="text-danger text-center">{{ msg }}</p>
+  {% endif %}
   <div class="row mb-3">
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
@@ -19,12 +22,13 @@
     </div>
   </div>
   <div class="mb-3 text-center">
-    <button type="submit" class="btn btn-success" name="signIn">Sign In</button>
+    <button type="submit" class="btn btn-outline-success" name="signIn">Sign In</button>
   </div>
+  <hr>
   <div class="container text-center">
     Don't Have an Account?
     <a href="{{ url_for('register') }}">
-    <button class="btn btn-link" type="button">Sign Up</button>
+    <button class="btn btn-outline-primary btn-sm" type="button">Sign Up</button>
     </a>
   </div>
 </form>

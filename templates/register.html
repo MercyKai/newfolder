@@ -1,12 +1,13 @@
 {% extends "logins.html" %}
 
 {% block content %}
-<section class="container p-4" style="max-width: 600px; background-color: white; margin-top:20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); border-radius: 8px;">  
+<section class="container px-4 py-2 mb-5" style="max-width: 600px; background-color: white; margin-top:20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); border-radius: 8px;">  
 <form method="post" action="{{ url_for('register') }}">
   <section class="container text-center md">
     <h1>Register</h1>
     <p class="lead">Create an Account</p>
   </section>
+
 <div class=" mb-3">
   <select class="form-select" aria-label="Default select example" name="usertype" required>
     <option Value="" disabled selected>Select User Type</option>
@@ -28,19 +29,23 @@
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required>
 </div>
+{% if msg %}
+<p class="text-danger">{{ msg }}</p>
+{% endif %}
 </div>
 <div class="row mb-3">
   <label for="inputPassword5" class="form-label">Password</label>
   <input type="password" id="inputPassword5" name="password" class="form-control" aria-describedby="passwordHelpBlock" required>
   </div>
 </div>
-<div class="mb-3 text-center">
-  <button type="submit" class="btn btn-success" value="Sign Up" name="signUp">Sign Up</button>
+<div class="mb-2 text-center">
+  <button type="submit" class="btn btn-outline-success" value="Sign Up" name="signUp">Sign Up</button>
 </div>
+<hr>
 <div class="container text-center">
   Already Have an Account?
   <a href="{{ url_for('login') }}">
-  <button class="btn btn-link" type="button">Sign In</button>
+  <button class="btn btn-outline-primary btn-sm" type="button">Sign In</button>
   </a>
 </div>
 </form>

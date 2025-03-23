@@ -18,14 +18,14 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ url_for('index') }}">CalmSpace</a>
+      <a class="navbar-brand fs-2" href="{{ url_for('index') }}">CalmSpace</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto fs-4">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('services') }}">Services</a>
@@ -34,7 +34,9 @@
             <a class="nav-link" href="{{ url_for('therapists') }}">Our Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('login') }}">
+              <button class="btn btn-outline-primary mt-2" type="button">Login</button>
+              </a>
           </li>       
         </ul>
       </div>
@@ -45,7 +47,7 @@
 
 {% endblock %}
 
-<div class="card py-3 px-5" >
+<div class="card py-3 px-5" style="background-color: #ede6ff">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="{{ url_for('static', filename='images/ready.jpg') }}" class="img-fluid rounded-start" alt="...">
@@ -58,13 +60,13 @@
             you need help with stress, anxiety, relationships
              or personal growth, we provide a safe space for
               conversations and change.</p>
-              <a href="{{ url_for('login') }}" class="btn btn-primary stretched-link">GET STARTED</a>
+              <a href="{{ url_for('login') }}" class="btn btn-dark">GET STARTED</a>
       </div>
     </div>
   </div>
 </div>
 
-<footer class="text-black text-center py-2" style="background-color: #ede6ff">
+<footer class="text-black text-center py-2" style="background: linear-gradient(to bottom, #6a5acd, #ede6ff);">
   <div class="container">
       <div class="row">
           <div class="col-md-6">
@@ -74,9 +76,9 @@
           </div>
           <div class="col-md-6">
               <h3>Contact Details</h3>
-              <ul class="list-unstyled lead">
-                  <li><a href="https://wa.me/" class="text-success">WhatsApp: (+254) 700 123 456</a></li>
-                  <li><a href="mailto:info@calmspace.com" class="text-primary">info@calmspace.com</a></li>
+              <ul class="list-unstyled">
+                  <li><a href="https://wa.me/" class="text-success contact">WhatsApp: (+254) 700 123 456</a></li>
+                  <li><a href="mailto:info@calmspace.com" class="text-primary contact">info@calmspace.com</a></li>
                   <li>Virtual Hours: 8:00 AM to 7:00 PM</li>
               </ul>
           </div>
@@ -84,7 +86,7 @@
   </div>
 </footer>
 
-<div class="text-center text-black" style="background: linear-gradient(to top, #6a5acd, #ede6ff); font-size: 15px;">&copy; 2025 CalmSpace. All rights reserved.</div>
+<div class="text-center text-black footer">&copy; 2025 CalmSpace. All rights reserved.</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
